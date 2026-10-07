@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-10-02T01:47:41.478Z",
+  "sourceSnapshotAt": "2026-10-02T01:03:16.000Z",
+  "scope": "Aggregated community-reported planning ranges; no case-level records",
+  "method": {
+    "lookbackDays": 365,
+    "approvalWindow": "50th-to-90th percentile of the latest 150 Regular or 250 Premium reported approvals",
+    "cardWindow": "25th-to-75th percentile of reported approval-to-card-received days",
+    "premiumClock": "Latest reported filing, Premium request, biometrics, or RFIE milestone"
+  },
+  "stats": {
+    "sourceRows": 3308,
+    "importedRows": 3303,
+    "skippedRows": 5,
+    "approvedRows": 2411,
+    "cardReceivedRows": 676,
+    "modelRows": 3283,
+    "sourceUrl": "https://opt-pulse.vercel.app/data/cases.json"
+  },
+  "cohorts": {
+    "initial": {
+      "regular": {
+        "approvalDays": { "p50": 148, "p90": 175 },
+        "cardAfterApprovalDays": { "p25": 8, "p75": 11 },
+        "sampleTotal": 1015,
+        "reportedApprovals": 655,
+        "pending": 360,
+        "reportedCardReceipts": 187,
+        "rangeSample": 150
+      },
+      "premium": {
+        "approvalDays": { "p50": 31, "p90": 35 },
+        "cardAfterApprovalDays": { "p25": 8, "p75": 10 },
+        "sampleTotal": 1632,
+        "reportedApprovals": 1320,
+        "pending": 312,
+        "reportedCardReceipts": 389,
+        "rangeSample": 250
+      }
+    },
+    "stem": {
+      "regular": {
+        "approvalDays": { "p50": 180, "p90": 183 },
+        "cardAfterApprovalDays": { "p25": 7, "p75": 10 },
+        "sampleTotal": 343,
+        "reportedApprovals": 188,
+        "pending": 155,
+        "reportedCardReceipts": 34,
+        "rangeSample": 150
+      },
+      "premium": {
+        "approvalDays": { "p50": 33, "p90": 43 },
+        "cardAfterApprovalDays": { "p25": 8, "p75": 12 },
+        "sampleTotal": 293,
+        "reportedApprovals": 232,
+        "pending": 61,
+        "reportedCardReceipts": 58,
+        "rangeSample": 232
+      }
+    }
+  },
+  "productUrl": "https://optwatcher.com/en",
+  "methodologyUrl": "https://github.com/northsea-create/optwatcher-methodology"
+}
